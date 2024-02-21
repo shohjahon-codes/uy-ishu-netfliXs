@@ -1,0 +1,134 @@
+*{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+/* .container{
+    max-width: 1440px;
+    padding: 0 80px;
+    margin:  0 auto;
+} */
+
+
+.card {
+  border: 1px solid silver;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.23s ease-in-out;
+  max-width: 320px;
+}
+
+.card .card-body {
+  padding: 16px;
+  height: 320px;
+}
+
+.card img {
+  object-fit: cover;
+  object-position: center;
+  height: 230px;
+  width: 100%;
+}
+
+.card h2 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.card li {
+  margin: 12px 0;
+}
+
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+    rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+    rgba(0, 0, 0, 0.07) 0px 16px 16px;
+    transform: scale(1.001);
+}
+
+.card .btn-wrappeer{
+  height: 120px;
+  align-items: center;
+}
+
+
+.darkmode{
+  *{
+    background: #000 !important;
+    color: white !important; 
+    border: black !important;
+  }
+}
+
+
+.loader {
+  position: absolute;
+  top: 400px;
+  left: 1000px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+/* Toast */
+
+.toast{
+  z-index: 9999999999999999;
+  position: fixed;
+  width: 300px;
+  height: 60px;
+  padding: 0 20px;
+  background: lime;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  right: -300px;
+  align-items: center;
+  top: 100px;
+  opacity: 0;
+  border-radius: 20px;
+  font-weight: 700;
+  font-family: sans-serif;
+}
+
+
+.toast-close{
+  z-index: 9999999999999999;
+  position: fixed;
+  width: 300px;
+  height: 60px;
+  padding: 0 20px;
+  background: red;
+  color: #000;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  right: -300px;
+  align-items: center;
+  top: 100px;
+  opacity: 0;
+  border-radius: 20px;
+  font-weight: 700;
+  font-family: sans-serif;
+}
